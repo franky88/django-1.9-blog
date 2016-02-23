@@ -1,6 +1,16 @@
 from django.conf.urls import url
-from . import views
+from .views import (
+	index,
+	create,
+	detail,
+	delete,
+	update,
+	)
 
 urlpatterns = [
-	url(r'^', views.index, name='index'),
+	url(r'^$', index),
+	url(r'^create/$', create),
+	url(r'^detail/$', detail),
+	url(r'^delete/$', delete),
+	url(r'^update/$', update),
 ]
